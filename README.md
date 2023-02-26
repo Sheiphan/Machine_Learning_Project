@@ -46,3 +46,23 @@ git push origin main
 ```
 git remote -v
 ```
+
+### _TO setup CI/CD pipleline in Render we  need 3 information_
+1. RENDER_EMAIL = sheiphanshaijan@gmail.com
+2. RENDER_API = rnd_wbWvEr1rkX2QW2ZVneAEev6X1ziV
+3. RENDER_APP_NAME = ml-regression-app
+
+### _BUILD DOCKER IMAGE_
+```
+docker build -t <image_name>:<tagname> .
+```
+> Note : Image should always be in small letters
+
+### _To list docker images_
+```
+docker images
+```
+### _To Run docker image_
+```
+docker run -p 5000:5000 -e PORT=5000 <IMAGE ID>
+```
