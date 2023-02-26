@@ -42,5 +42,7 @@ git commit -m "message"
 ```
 git push origin main
 ```
-
-Just to check
+### _To check remote url_
+```
+git remote -v
+```
