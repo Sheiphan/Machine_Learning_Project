@@ -1,7 +1,7 @@
 # Machine_Learning_Project
 
 1. [Github](www.github.com/)
-2. [Heroku] 
+2. [Render](https://render.com/) 
 
 ## Creating conda environment
 
