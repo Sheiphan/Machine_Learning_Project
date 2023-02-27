@@ -66,3 +66,20 @@ docker images
 ```
 docker run -p 5000:5000 -e PORT=5000 <IMAGE ID>
 ```
+
+name: Trigger Render Deployment
+on:
+  push:
+    branches:
+      - main
+jobs:
+  main:
+    name: Deploy to Render
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger deployment
+        uses: sws2apps/render-deployment@main #consider using pin for dependabot auto update
+        with:
+          serviceId: ${{ secrets.RENDER_SERVICE_ID }}
+          apiKey: ${{ secrets.RENDER_API_KEY }}
+          multipleDeployment: false #optional, default true
